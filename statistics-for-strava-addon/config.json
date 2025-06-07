@@ -13,5 +13,5 @@
   "map": ["config", "build", "storage", "files"],
   "options": {},
   "schema": {},
-  "image": "ghcr.io/mrvautin/ha_statistics_for_strava:latest"
+  "image": "ghcr.io/mrvautin/ha_statistics_for_strava"
 }
