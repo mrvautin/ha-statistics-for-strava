@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 echo "Starting Strava Statistics add-on..."
@@ -10,5 +10,7 @@ mkdir -p /var/www/storage/files
 chmod -R 777 /var/www/storage/database
 chmod -R 777 /var/www/storage/files
 
+echo "Setup complete"
+
 # Run the service
-exec "$@"
+exec tail -f /dev/null
