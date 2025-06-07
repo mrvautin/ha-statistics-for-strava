@@ -1,8 +1,12 @@
 FROM robiningelbrecht/strava-statistics:latest
 
+# Set working directory
 WORKDIR /var/www
 
-COPY run.sh /usr/local/bin/run.sh
-RUN chmod +x /usr/local/bin/run.sh
+# Install additional dependencies (example)
+RUN apt-get update && apt-get install -y \
+    curl \
+    jq
 
-ENTRYPOINT ["/usr/local/bin/run.sh"]
+# Set an entrypoint (optional)
+CMD ["php", "-S", "0.0.0.0:5001", "-t", "/var/www"]

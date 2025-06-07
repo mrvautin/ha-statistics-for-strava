@@ -1,0 +1,18 @@
+services:
+  app:
+    image: robiningelbrecht/strava-statistics:latest
+    container_name: statistics-for-strava
+    restart: unless-stopped
+    ports:
+      - 5001:5001
+    volumes:
+      - ./config:/var/www/config/app
+      - ./build:/var/www/build
+      - ./storage/database:/var/www/storage/database
+      - ./storage/files:/var/www/storage/files
+    env_file: ./.env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VERSION: "1.0.0"
