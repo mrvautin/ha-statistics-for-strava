@@ -1,0 +1,16 @@
+{
+  "name": "HA Statistics for Strava",
+  "version": "1.0.0",
+  "slug": "statistics_for_strava",
+  "description": "Home Assistant add-on for Statistics for Strava",
+  "arch": ["amd64", "armv7", "arm64"],
+  "startup": "application",
+  "boot": "auto",
+  "ports": {
+    "8080/tcp": 8080
+  },
+  "map": ["config", "build", "storage", "files"],
+  "options": {},
+  "schema": {},
+  "image": "local/statistics-strava-addon"
+}
