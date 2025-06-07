@@ -1,7 +1,7 @@
 {
   "name": "HA Statistics for Strava",
   "version": "1.0.0",
-  "slug": "statistics_for_strava",
+  "slug": "ha_statistics_for_strava",
   "description": "Home Assistant add-on for Statistics for Strava",
   "arch": ["amd64", "armv7", "arm64"],
   "startup": "application",
@@ -12,5 +12,5 @@
   "map": ["config", "build", "storage", "files"],
   "options": {},
   "schema": {},
-  "image": "local/statistics-strava-addon"
+  "image": "ghcr.io/mrvautin/ha_statistics_for_strava:latest"
 }
